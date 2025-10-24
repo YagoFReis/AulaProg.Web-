@@ -1,0 +1,116 @@
+/** reset de estilo **/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/** estilo do corpo **/
+body{
+    font-family: 'segos ui', 'segoe ui', tahoma, geneva, verdana, sans-serif;
+    background-color: #f8f3f3;
+    color: #333;
+    line-height: 1.6;
+}
+/** cabecalho **/
+header{
+    background-color: linear-gradient(135deg, #f58c3c 0%, #764ba2 100%);
+    color: #AE6938;
+    padding: 1rem 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+/** estilo do nav **/
+nav a{
+    max-width: 1200px;
+    color: #080808;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px;
+}
+/** estilo da lista do nav **/
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+/** estilo do hover do nav **/
+   nav a:hover{
+    color: #ea9f14;
+    text-decoration: nome;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+    opacity: 0.8;
+   }
+
+   nav a.active{
+    color: #ea9f14;
+    font-weight: 600;
+   }
+
+/** estilo dos titulos **/
+   h2{
+    color: #000000;
+    margin-bottom: 10px;
+   }
+
+   form{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   /** estilo dos fieldsets **/
+fieldset{
+    border: none;
+    margin-bottom: 15px;
+   }    
+    label{
+     display: block;
+     margin-bottom: 5px;
+     font-weight: bold;
+    }  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"]{
+     width: 100%;
+     padding: 8px;
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+    }
+    legend{
+     font-size: 1.2em;
+     margin-bottom: 10px;
+     font-weight: bold;
+    }
+
+.hero{
+    background-attachment: fixed;
+    background-size: center;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;   
+}
+
+   /** estilo do main **/
+main{
+    max-width: 1200px;
+    margin: 80px auto 10px auto;
+    padding: 8px;    
+   }
+  
