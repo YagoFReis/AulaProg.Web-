@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projetos Sociais</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos da ONG</title>
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <header>
-    <h1>Projetos da ONG</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <h1>Projetos da ONG</h1>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a class="active" href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>“Você pode não mudar o mundo ao salvar um animal, mas muda o mundo dele para sempre.”
-         <img src="Jpg/C2.png" alt="Voluntários em ação">
-</h2>
-      <h2>Voluntariado.</h2>
+  <main class="container">
+    <section class="card" style="grid-column: span 12;">
+      <h2>“Você pode não mudar o mundo ao salvar um animal, mas muda o mundo dele para sempre.”</h2>
+      <img src="Jpg/C2.png" alt="Voluntários em ação" style="width: 100%; border-radius: 8px; margin: 16px 0;">
+      <p>Quer fazer parte dessa transformação? A YR está sempre em busca de corações dispostos a ajudar.</p>
 
-      <p>Quer fazer parte dessa transformação?<p></p> A YR está sempre em busca de corações dispostos a ajudar.<p></p> Precisamos de voluntários para:
+      <ul style="text-align: left; margin-left: 32px;">
+        <li>Cuidar dos animais no abrigo</li>
+        <li>Ajudar em eventos de adoção</li>
+        <li>Apoiar nas redes sociais e divulgação</li>
+        <li>Contribuir com transporte e lar temporário</li>
+      </ul>
 
-<p></p>- Cuidar dos animais no abrigo
+      <p>Não é necessário experiência — só vontade de fazer a diferença.</p>
+      <p>Envie um e-mail para <strong>voluntarios@yradocao.org</strong> ou fale conosco pelas redes sociais.</p>
+    </section>
 
-<p></p>- Ajudar em eventos de adoção
-<p></p>- Apoiar nas redes sociais e divulgação
-
-<p></p>- Contribuir com transporte e lar temporário
-
-<p></p>Não é necessário experiência — só  vontade de fazer a diferença. 
-<p></p>Envie um e-mail para voluntarios@yradocao.org ou fale conosco pelas redes sociais.
-</p>
-
-<h2>Você pode ajudar:</h2>
-
-<p></p>- Doe ração, medicamentos ou itens de limpeza
-<p></p>- Contribua financeiramente via Pix ou transferência
-<p></p>- Compartilhe nossos posts e histórias
-<p></p>- Seja um padrinho de um animal resgatado
-</p>
-
+    <section class="card" style="grid-column: span 12;">
+      <h2>Você pode ajudar:</h2>
+      <ul style="text-align: left; margin-left: 32px;">
+        <li>Doe ração, medicamentos ou itens de limpeza</li>
+        <li>Contribua financeiramente via Pix ou transferência</li>
+        <li>Compartilhe nossos posts e histórias</li>
+        <li>Seja um padrinho de um animal resgatado</li>
+      </ul>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 YR – Amor que Resgata</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.onclick = () => menu.classList.toggle('open');
+  </script>
 </body>
 </html>

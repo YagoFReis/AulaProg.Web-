@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YR – Amor que Resgata</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <header>
-    <h1>YR – Amor que Resgata</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <h1>YR – Amor que Resgata</h1>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li><a class="active" href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
+  <section class="hero">
+    <h2>“Você pode não mudar o mundo ao salvar um animal, mas muda o mundo dele para sempre.”</h2>
+  </section>
+
+  <main class="container">
+    <section class="card" style="grid-column: span 6;">
       <h2>Quem Somos</h2>
-      <p>A YR nasceu do desejo de transformar vidas — humanas e animais. Somos uma organização sem fins lucrativos dedicada ao resgate, cuidado e adoção responsável de animais abandonados. Acreditamos que cada ser merece amor, respeito e um lar seguro..</p>
-      <img src="Jpg/C1.png" alt="ONG">
+      <p>
+        A YR nasceu do desejo de transformar vidas — humanas e animais.
+        Somos uma organização sem fins lucrativos dedicada ao resgate, cuidado e
+        adoção responsável de animais abandonados.
+      </p>
+      <img src="Jpg/C1.png" alt="ONG" style="width: 100%; border-radius: 8px;">
     </section>
 
-    <section>
+    <section class="card" style="grid-column: span 6;">
       <h2>Contato</h2>
       <p>Email: contato@amorqueresgata.org</p>
       <p>Telefone: (62) 99999-9999</p>
@@ -36,5 +49,12 @@
   <footer>
     <p>&copy; 2025 YR – Amor que Resgata</p>
   </footer>
+
+  <script>
+    // Menu mobile
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.onclick = () => menu.classList.toggle('open');
+  </script>
 </body>
 </html>
