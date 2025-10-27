@@ -1,8 +1,8 @@
+// Seleciona o botão do menu e a lista de navegação
+const toggle = document.getElementById('menu-toggle');
+const menu = document.querySelector('nav ul');
 
-// Menu mobile
- 
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.querySelector('nav ul');
-    toggle.addEventListener('click', () => {
-        menu.classList.toggle('open');
-    });
+// Adiciona evento de clique para abrir/fechar o menu
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
