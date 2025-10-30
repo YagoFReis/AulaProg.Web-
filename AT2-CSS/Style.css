@@ -49,14 +49,12 @@ body {
   font-family: var(--font-family);
   color: #333;
   line-height: 1.6;
-
-  /* Imagem de fundo */
-  background: url('../Jpg/C1.png') center/cover no-repeat fixed;
+  background: url('../AT1-Jpg/C1.png') center/cover no-repeat fixed;
   position: relative;
   padding-top: 70px;
+  background-color: var(--cor-neutra-200); /* fallback */
 }
 
-/* Camada escura global */
 body::before {
   content: "";
   position: fixed;
@@ -64,25 +62,13 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5); /* ajuste a opacidade para mais ou menos escuro */
-  z-index: 0; /* fica atrás do conteúdo */
+  background-color: rgba(0,0,0,0.5);
+  z-index: 0;
 }
 
-/* Conteúdos acima da camada escura */
-header,
-main,
-footer,
-.hero,
-.card,
-form {
+header, main, footer, .hero, .card, form {
   position: relative;
-  z-index: 1; /* garante que fiquem acima da camada escura */
-}
-
-/* Corpo */
-body {
-  /* cor de fallback caso a imagem não carregue */
-  background-color: var(--cor-neutra-200);
+  z-index: 1;
 }
 
 /* =====================================
@@ -119,14 +105,8 @@ nav a {
   transition: all 0.3s ease;
 }
 
-nav a:hover {
-  color: var(--cor-acento);
-}
-
-nav a.active {
-  font-weight: 600;
-  color: var(--cor-acento);
-}
+nav a:hover { color: var(--cor-acento); }
+nav a.active { font-weight: 600; color: var(--cor-acento); }
 
 /* Dropdown menu */
 nav ul li {
@@ -144,9 +124,7 @@ nav ul li ul {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-nav ul li:hover ul {
-  display: block;
-}
+nav ul li:hover ul { display: block; }
 
 nav ul li ul li a {
   color: #000;
@@ -154,9 +132,7 @@ nav ul li ul li a {
   display: block;
 }
 
-nav ul li ul li a:hover {
-  background-color: var(--cor-neutra-300);
-}
+nav ul li ul li a:hover { background-color: var(--cor-neutra-300); }
 
 /* Menu Mobile */
 .menu-toggle {
@@ -186,9 +162,7 @@ nav ul.open {
   border-radius: 0 0 0 8px;
 }
 
-nav ul.open li {
-  margin-bottom: var(--space-2);
-}
+nav ul.open li { margin-bottom: var(--space-2); }
 
 /* =====================================
    GRID & LAYOUT
@@ -202,7 +176,6 @@ nav ul.open li {
   padding: var(--space-3);
 }
 
-/* Responsividade */
 @media (max-width: 1440px) { .container { grid-template-columns: repeat(10, 1fr); } }
 @media (max-width: 1200px) { .container { grid-template-columns: repeat(8, 1fr); } }
 @media (max-width: 992px) { .container { grid-template-columns: repeat(6, 1fr); } }
@@ -212,7 +185,6 @@ nav ul.open li {
   .menu-toggle { display: flex; }
 }
 @media (max-width: 480px) { .container { grid-template-columns: repeat(2, 1fr); } }
-
 
 /* =====================================
    HERO / SEÇÃO PRINCIPAL
@@ -224,16 +196,12 @@ nav ul.open li {
   justify-content: center;
   text-align: center;
   color: var(--cor-neutra-100);
-  
 }
-.hero h2 {
-  padding: 0 20px;
-}
+.hero h2 { padding: 0 20px; }
 
 /* =====================================
    COMPONENTES DE INTERFACE
 ===================================== */
-/* Botões */
 .button {
   background: var(--cor-primaria);
   color: var(--cor-neutra-100);
@@ -247,7 +215,6 @@ nav ul.open li {
 .button:active { transform: scale(0.98); }
 .button:disabled { background: var(--cor-neutra-300); cursor: not-allowed; }
 
-/* Cards */
 .card {
   background: var(--cor-neutra-100);
   border-radius: 8px;
@@ -258,7 +225,6 @@ nav ul.open li {
 }
 .card:hover { transform: translateY(-4px); }
 
-/* Formulário */
 form {
   background: var(--cor-neutra-100);
   border-radius: 8px;
@@ -269,7 +235,6 @@ form {
   margin: var(--space-5) auto;
 }
 
-/* Campos do formulário */
 label { font-weight: bold; margin-bottom: var(--space-1); display: block; }
 input, select, textarea {
   width: 100%;
@@ -309,3 +274,140 @@ input:focus, select:focus, textarea:focus {
 .mt-2 { margin-top: var(--space-2); }
 .mt-3 { margin-top: var(--space-3); }
 .mt-4 { margin-top: var(--space-4); }
+
+/* =====================================
+   ESTILO DOS PROJETOS 
+===================================== */
+.projeto {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.projeto-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+  object-fit: cover;
+  max-height: 280px;
+}
+
+.projeto h2 {
+  color: var(--cor-secundaria);
+  margin-bottom: var(--space-2);
+  font-size: var(--font-h2);
+  text-align: center;
+}
+
+.projeto p {
+  font-size: var(--font-body);
+  margin-bottom: var(--space-2);
+  color: #444;
+  text-align: center;
+}
+
+.projeto ul {
+  margin-left: var(--space-3);
+  list-style: disc;
+  color: #555;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .projeto { grid-column: span 12; }
+}
+
+/* Container de projetos */
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Cards modernos */
+.projeto-card {
+  background: linear-gradient(135deg, #fef9f0, #fff5eb);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+  border-left: 6px solid var(--cor-primaria);
+}
+
+.projeto-card h3 {
+  color: var(--cor-secundaria);
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.projeto-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.projeto-card li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+  position: relative;
+  padding-left: 20px;
+}
+
+.projeto-card li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--cor-primaria);
+  font-weight: bold;
+}
+
+.projeto-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #fff7ed, #fff0d6);
+}
+
+#tabelavoluntarios table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-3);
+  font-family: var(--font-family);
+}
+
+#tabelavoluntarios th,
+#tabelavoluntarios td {
+  padding: var(--space-2);
+  border: 1px solid var(--cor-neutra-300);
+  padding: var(--space-2);
+  text-align: left;
+}
+#tabelavoluntarios th {
+  background-color: var(--cor-primaria);
+  color: var(--cor-neutra-100);
+}
+#tabelavoluntarios tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#tabelavoluntarios tr:hover {
+  background-color: #f1f1f1;
+}
+#tabelavoluntarios caption {
+  caption-side: top;
+  font-size: var(--font-h2);
+  font-weight: bold;
+  margin-bottom: var(--space-3);
+  color: var(--cor-secundaria);
+}
+
+/* =====================================
+   RODAPÉ//===================================== */
+footer {
+  text-align: center;
+  padding: var(--space-3);
+  background: var(--cor-neutra-300);
+  margin-top: var(--space-5);
+}
